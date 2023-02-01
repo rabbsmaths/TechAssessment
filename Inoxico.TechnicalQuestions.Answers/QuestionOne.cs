@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Data.Common;
+using System.Text.RegularExpressions;
 
 namespace Inoxico.TechnicalQuestions.Answers
 {
@@ -27,7 +28,7 @@ namespace Inoxico.TechnicalQuestions.Answers
                         //Check if word is valid word else remove
                         for(int wd = 0; wd < words.Length; wd++)
                         {
-                            if (!words[wd].All(Char.IsLetter))
+                            if (!Regex.IsMatch(words[wd], @"[a-zA-Z]"))
                             {
                                 List<string> pos = new List<string>(words);
                                 pos.RemoveAt(wd);
@@ -47,7 +48,7 @@ namespace Inoxico.TechnicalQuestions.Answers
                         //Check if word is valid word else remove
                         for (int wd = 0; wd < words.Length; wd++)
                         {
-                            if (!words[wd].All(Char.IsLetter))
+                            if (!Regex.IsMatch(words[wd], @"[a-zA-Z]"))
                             {
                                 List<string> pos = new List<string>(words);
                                 pos.RemoveAt(wd);
@@ -64,7 +65,7 @@ namespace Inoxico.TechnicalQuestions.Answers
                     //Check if word is valid word else remove
                     for (int wd = 0; wd < words.Length; wd++)
                     {
-                        if (!words[wd].All(Char.IsLetter))
+                        if (!Regex.IsMatch(words[wd], @"[a-zA-Z]"))
                         {
                             List<string> pos = new List<string>(words);
                             pos.RemoveAt(wd);
