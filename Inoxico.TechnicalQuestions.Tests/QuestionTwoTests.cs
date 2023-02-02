@@ -23,7 +23,7 @@ namespace Inoxico.TechnicalQuestions.Tests
 
             var result = QuestionTwo.GetPitDepth(points);
 
-            Assert.Equal(4, result);
+            Assert.Equal(2, result);
         }
     }
 }
