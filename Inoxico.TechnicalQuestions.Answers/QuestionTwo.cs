@@ -20,7 +20,7 @@ namespace Inoxico.TechnicalQuestions.Answers
                //Check depth condition and return pitdepth
                 if (r <= points.Length)
                 {
-                    if ((points[p] >= 0) && (points[p] > points[q]) && (points[q] < points[r]))
+                    if ((points[p] > 0) && (points[p] > points[q]) && (points[q] < points[r]))
                     {
                         deepestPit.Add(Math.Min(points[p] - points[q], points[r] - points[q]));
                     }
